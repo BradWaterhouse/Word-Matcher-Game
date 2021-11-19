@@ -1,0 +1,22 @@
+matrix:
+  include:
+    - language: node_js
+      node_js: 15
+      before_install:
+        - npm install -g yarn
+      install:
+        - yarn install
+      script:
+        - yarn test
+        - yarn lint
+        - yarn build
+    - language: node_js
+      node_js: 14
+      before_install:
+        - npm install -g yarn
+      install:
+        - yarn install
+      script:
+        - yarn test
+        - yarn lint
+        - yarn build

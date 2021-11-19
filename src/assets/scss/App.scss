@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/helpers/visibility";
+@import "~bulma/sass/helpers/typography";
+@import "~bulma/sass/elements/container";
+@import "~bulma/sass/elements/button";
+@import "~bulma/sass/grid/columns.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/components/navbar";
+@import "~bulma/sass/elements/title";
+@import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/image";
+@import "~bulma/sass/form/all";
+@import "spinner";
+
+.main-content {
+  margin: 1em 1em 0;
+}
+
+.is-danger {
+  background-color: #ffb8b8;
+}
+
+.game-square {
+  padding: 11vh 0;
+  text-align: center;
+  height: 20vh;
+  background-color: #ffb8b8;
+  outline: black solid 2px;
+}
+
+.game-square-selected {
+  pointer-events: none;
+  padding: 11vh 0;
+  text-align: center;
+  height: 20vh;
+  background-color: #b8f9ff;
+  outline: black solid 2px;
+}
+
+.game-square-found {
+  pointer-events: none;
+  padding: 11vh 0;
+  text-align: center;
+  height: 20vh;
+  background-color: #9bfa93;
+  outline: black solid 2px;
+}

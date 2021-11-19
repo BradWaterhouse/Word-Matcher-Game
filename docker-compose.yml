@@ -1,0 +1,24 @@
+version: "3.6"
+
+services:
+  react-website-template-nginx:
+    image: elliotjreed/react-website-template-nginx
+    container_name: react-website-template-nginx
+    restart: always
+    networks:
+      - react-website-template
+      - web
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.nonwww.frontend.rule=Host:DOMAIN"
+      - "traefik.www.frontend.rule=Host:www.DOMAIN"
+      - "traefik.protocol=h2c"
+      - "traefik.port=TRAEFIKPORT"
+
+networks:
+  web:
+    external: true
+  react-website-template:
+    name: react-website-template
+
